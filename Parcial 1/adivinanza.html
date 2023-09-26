@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinar el numero</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="adivinanza.js"></script>
+</head>
+<body style="background-color: aliceblue;">
+    <h1>ADIVINA EL NUMERO</h1>
+    <p>Adivina el numero entre 1 y 60</p>
+    <input type="text" id="entrada" placeholder="Introduce un numero">
+    <button onclick="comprobarNumero()">Comprobar el numero</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        const numeroAleatorio = Math.floor(Math.random() * 60) + 1;
+        let intentos = 0;
+
+        function comprobarNumero() {
+            const entrada = document.getElementById("entrada").value;
+            const resultado = document.getElementById("resultado");
+
+            if (intentos > 5){
+                alert("Perdiste tonto")
+                window.location.href="adivinanza.html"
+            }
+
+            if (isNaN(entrada) || entrada < 1 || entrada > 60) {
+                resultado.textContent = "Por favor, introduce un numero valido entre 1 y 60.";
+            } else {
+                intentos++;
+                if (entrada == numeroAleatorio) {
+                    resultado.textContent = `Correcto adivinaste el numero en ${intentos} intentos`;
+                } else if (entrada < numeroAleatorio) {
+                    resultado.textContent = "El numero es mayor. Intenta de nuevo";
+                } else {
+                    resultado.textContent = "El numero es menor. Intenta de nuevo";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
