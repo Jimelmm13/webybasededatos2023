@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-12">
                 <h2>Bienvenido al sistema de gestión de alumnos</h2>
-                <img src="imagenes/foto1.png" alt="">
+                <img src="imagenes/logo.png" alt="" width="300px">
             </div>
         </div>
     </div>
