@@ -35,11 +35,11 @@
                                 </tr>
                             </thead>
                                 <tbody>
-                                    <?php while($registro = $datos->fetch_assoc){ ?>
+                                    <?php while($registro = $datos->fetch_assoc()){ ?>
                                         <tr>
                                             <td><?php echo $registro ["id"]; ?></td>
                                             <td><?php echo $registro ["nombre"]; ?></td>
-                                            <td><?php echo $registro ["numero_de_control"]; ?></td>
+                                            <td><?php echo $registro ["numero_control"]; ?></td>
                                             <td><?php echo $registro ["semestre"]; ?></td>
                                             <td><?php echo $registro ["edad"]; ?></td>
                                             <td><?php echo $registro ["turno"]; ?></td>
