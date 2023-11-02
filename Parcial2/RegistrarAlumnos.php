@@ -9,10 +9,11 @@
 </head>
 <body>
     <?php include 'menu.php'; ?>
+
     <div class="container">
         <div class="row">
             <div class="col-12 card m-4 p-4">
-                <form action="" method="POST">
+                <form action="GuardaRegistro.php" method="POST">
                     <div class="form-group">
                         <label for="">Nombre</label>
                         <input name="nombre" type="text" class="form-control" placeholder="Teclea el nombre del alumno" required>
@@ -33,8 +34,8 @@
                         <label for="">Turno</label>
                         <select name="turno" class="form-control" required>
                             <option value="">Selecciona el turno</option>
-                            <option value="MATUTINO">Matutino</option>
-                            <option value="VESPERTINO">Vespertino</option>
+                            <option value="MATUTINO">MATUTINO</option>
+                            <option value="VESPERTINO">VESPERTINO</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -45,11 +46,15 @@
                         <option value="1">MASCULINO</option>
                         <option value="2">Prefiero no responder</option>
                     </select>
-                    </div><br>
-                    <div>
-                        <input type="submit" value="Registrar" class="btn btn-primary">
-                        <a href="consultarAlumnos.php" class="btn btn-danger">Cancelar</a>
                     </div>
+                    <div>
+                        <br>
+                        <center>
+                        <input type="submit" value="Registrar" class="btn btn-primary">
+                        <a href="consultarAlumnos.php" class="btn btn-danger">Cancelar</a> </center>
+                        
+                    </div>
+                    <br>
                 </form>
             </div>
         </div>

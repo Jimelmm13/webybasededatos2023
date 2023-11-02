@@ -10,11 +10,14 @@
 <body>
     <?php
      include 'menu.php';
+     include 'conexionn.php';
+
+
      $id = $_GET["id"];
      $sql = "SELECT * FROM alumnos id=".$id;
 
      $datos = $conexionn->query($sql);
-     $alumnos = $datos->fetch_assoc()[0];
+     $alumnos = $datos->fetch_assoc();
      ?>
 
 
@@ -29,19 +32,20 @@
                     </div>
                     <div class="form-group">
                         <label for="">Numero de control:</label>
-                        <input name="nc" type="text" class="form-control" placeholder="Teclea el numero de control" required>
+                        <input value="<?php echo $alumno["numero_control"]; ?>"name="nc" type="text" class="form-control" placeholder="Teclea el numero de control del alumno" required>
                     </div>
                     <div class="form-group">
                         <label for="">Semestre:</label>
-                        <input name="semestre" type="text" class="form-control" placeholder="Teclea el semestre" required>
+                        <input value="<?php echo $alumno["semestre"]; ?>"name="semestre" type="text" class="form-control" placeholder="Teclea el semestre del alumno" required>
                     </div>
                     <div class="form-group">
                         <label for="">Edad</label>
-                        <input name="edad" type="text" class="form-control" placeholder="Teclea la edad" required>
+                        <input value="<?php echo $alumno["edad"]; ?>"name="edad" type="text" class="form-control" placeholder="Teclea la edad del alumno" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Turno</label>
-                        <select name="turno" class="form-control" required>
+                        <label for="">Turno </label>
+                        <select name="turno" id="" class="form-control" required>
+                        <option value="<?php echo $alumno["turno"]; ?>"><?php echo $alumno["turno"]; ?></option>
                             <option value="">Selecciona el turno</option>
                             <option value="MATUTINO">Matutino</option>
                             <option value="VESPERTINO">Vespertino</option>
