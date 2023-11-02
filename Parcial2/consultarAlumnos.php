@@ -45,8 +45,8 @@
                                             <td><?php echo $registro ["turno"]; ?></td>
                                             <td><?php echo $registro ["sexo"]; ?></td>
                                             <td>
-                                                <a href="" class="btn btn-sm btn-primary">Editar</a>
-                                                <a href="" class="btn btn-sm btn-danger">Eliminar</a>
+                                                <a href="editarAlumnos.php?id=<?php echo $registro["id"]; ?>" class="btn btn-sm btn-primary">Editar</a>
+                                                <a href="eliminarAlumno.php?id=<?php echo $registro["id"]; ?>" class="btn btn-sm btn-danger">Eliminar</a>
                                             </td>
                                         </tr>
 
@@ -63,12 +63,14 @@
                  </div>
             </div>
          </div>
+        </div>
 
          <footer class="text-center">
             <hr>
             CETIS 107 &copy; 2023
-            <script src="js/bootstrap.js"></script>
+            
 
          </footer>
+         <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
