@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 card m-4 p-4">
-            <form action="GuardarMateria.php" method="POST">
+            <form action="ConsultarMaterias.php" method="POST">
                     <div class="form-group">
                         <label for="">Nombre:</label>
                         <input name="nombre" type="text" class="form-control"  name= "nombre" placeholder="Teclea la materia" required>
