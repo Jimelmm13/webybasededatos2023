@@ -1,0 +1,7 @@
+Pasos para crear la base de datos:
+
+1. Activar los servicios de XAMPP MySQL y Apache
+2. Crear la base de datos con nombre "cetis107"
+3. Seleccionar opcion de Import en phpmyadmin
+4. Elegir el archivo .sql
+5. Para finalizar clic en el botón de Import.
