@@ -3,7 +3,7 @@
     $server     = "localhost"; //para XAMPP es solo "localhost"
     $user       = "root";
     $password   = "";
-    $baseDatos  = "basededatoscetis107";
+    $baseDatos  = "cetis107";
 
     $conexion = new mysqli($server, $user, $password, $baseDatos);
 
